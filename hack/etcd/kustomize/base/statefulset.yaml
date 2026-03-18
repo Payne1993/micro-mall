@@ -1,0 +1,93 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: proxima-etcd
+  namespace: proxima-etcd
+  labels:
+    app: proxima-etcd
+spec:
+  serviceName: proxima-etcd-headless
+  replicas: 3
+  podManagementPolicy: Parallel
+  selector:
+    matchLabels:
+      app: proxima-etcd
+  template:
+    metadata:
+      labels:
+        app: proxima-etcd
+    spec:
+      terminationGracePeriodSeconds: 30
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: proxima-etcd
+              topologyKey: kubernetes.io/hostname
+      containers:
+        - name: etcd
+          image: quay.io/coreos/etcd:v3.5.18
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: client
+              containerPort: 2379
+            - name: peer
+              containerPort: 2380
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          command:
+            - /usr/local/bin/etcd
+          args:
+            - --name=$(POD_NAME)
+            - --data-dir=/var/lib/etcd
+            - --listen-client-urls=http://0.0.0.0:2379
+            - --advertise-client-urls=http://$(POD_NAME).proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2379
+            - --listen-peer-urls=http://0.0.0.0:2380
+            - --initial-advertise-peer-urls=http://$(POD_NAME).proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380
+            - --initial-cluster=proxima-etcd-0=http://proxima-etcd-0.proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380,proxima-etcd-1=http://proxima-etcd-1.proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380,proxima-etcd-2=http://proxima-etcd-2.proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380
+            - --initial-cluster-state=new
+            - --initial-cluster-token=proxima-etcd-cluster
+            - --auto-compaction-retention=1
+            - --snapshot-count=10000
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/etcd
+          readinessProbe:
+            exec:
+              command:
+                - /usr/local/bin/etcdctl
+                - --endpoints=http://127.0.0.1:2379
+                - endpoint
+                - health
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+          livenessProbe:
+            exec:
+              command:
+                - /usr/local/bin/etcdctl
+                - --endpoints=http://127.0.0.1:2379
+                - endpoint
+                - health
+            initialDelaySeconds: 20
+            periodSeconds: 15
+            timeoutSeconds: 5
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+      volumes:
+        - name: data
+          emptyDir:
+            sizeLimit: 5Gi

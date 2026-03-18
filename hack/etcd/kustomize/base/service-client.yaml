@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: proxima-etcd-client
+  namespace: proxima-etcd
+  labels:
+    app: proxima-etcd
+spec:
+  type: ClusterIP
+  selector:
+    app: proxima-etcd
+  ports:
+    - name: client
+      port: 2379
+      targetPort: client

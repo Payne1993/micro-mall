@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package words.v1;
+
+option go_package = "proxima/app/word/api/words/v1";
+import "pbentity/words.proto";
+
+message CreateReq {
+  uint32 uid        = 1; // v:required
+  string word       = 2; // v:required
+  string definition = 3; // v:required
+}
+
+message CreateResp {
+  uint32 id = 1;
+}
+
+message GetReq {
+  uint32 id = 1; // v:required
+}
+
+message GetResp {
+  pbentity.Words words = 1;
+}
+
+service Words {
+  rpc Create(CreateReq) returns (CreateResp);
+  rpc Get(GetReq) returns (GetResp);
+}
