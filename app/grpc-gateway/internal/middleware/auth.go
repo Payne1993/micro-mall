@@ -12,15 +12,15 @@ import (
 type contextKey string
 
 const (
-	CtxKeyUserID  contextKey = "userId"
+	CtxKeyUserID   contextKey = "userId"
 	CtxKeyUsername contextKey = "username"
 )
 
-func Auth(next http.Handler) http.Handler {
-	whitelist := []string{"/health", "/api/v1/user/login", "/api/v1/user/register"}
+var WhiteList = []string{"/health", "/api/v1/user/login", "/api/v1/user/register"}
 
+func Auth(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		for _, p := range whitelist {
+		for _, p := range WhiteList {
 			if r.URL.Path == p {
 				next.ServeHTTP(w, r)
 				return
