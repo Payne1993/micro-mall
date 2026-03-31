@@ -2,10 +2,10 @@ package account
 
 import (
 	"context"
-	v1 "proxima/app/user/api/account/v1"
-	"proxima/app/user/api/pbentity"
-	"proxima/app/user/internal/controller/registry"
-	"proxima/app/user/internal/logic/account"
+	v1 "micro-mall.dev/app/user/api/account/v1"
+	"micro-mall.dev/app/user/api/pbentity"
+	"micro-mall.dev/app/user/internal/controller/registry"
+	"micro-mall.dev/app/user/internal/logic/account"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 	"google.golang.org/protobuf/types/known/timestamppb"

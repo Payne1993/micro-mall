@@ -3,8 +3,8 @@ package cmd
 import (
 	"context"
 
-	_ "proxima/app/user/internal/controller" // autoload all controllers
-	"proxima/app/user/internal/controller/registry"
+	_ "micro-mall.dev/app/user/internal/controller" // autoload all controllers
+	"micro-mall.dev/app/user/internal/controller/registry"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 	"github.com/gogf/gf/v2/os/gcmd"

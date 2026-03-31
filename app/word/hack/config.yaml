@@ -4,8 +4,8 @@
 gfcli:
   gen:
     dao:
-      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/proxima_word"
+      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/micro-mall_word"
         descriptionTag: true
     pbentity:
-      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/proxima_word"
+      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/micro-mall_word"
         descriptionTag: true

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"proxima/app/grpc-gateway/internal/gateway"
+	"micro-mall.dev/app/grpc-gateway/internal/gateway"
 
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/os/gcmd"

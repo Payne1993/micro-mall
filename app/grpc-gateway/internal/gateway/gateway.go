@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"net/http"
 
-	_ "proxima/app/grpc-gateway/internal/handlers" // auto-register all handlers
+	_ "micro-mall.dev/app/grpc-gateway/internal/handlers" // auto-register all handlers
 
-	"proxima/app/grpc-gateway/internal/middleware"
-	"proxima/app/grpc-gateway/internal/registry"
+	"micro-mall.dev/app/grpc-gateway/internal/middleware"
+	"micro-mall.dev/app/grpc-gateway/internal/registry"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 	"github.com/gogf/gf/v2/frame/g"

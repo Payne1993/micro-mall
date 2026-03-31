@@ -1,8 +1,11 @@
-module member
+module micro-mall.dev/app/member
 
-go 1.18
+go 1.25.4
 
-require github.com/gogf/gf/v2 v2.7.1
+require (
+	github.com/gogf/gf/v2 v2.7.1
+	github.com/joho/godotenv v1.5.1
+)
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect

@@ -6,7 +6,7 @@ syntax = "proto3";
 
 package pbentity;
 
-option go_package = "proxima/app/member/api/pbentity";
+option go_package = "micro-mall.dev/app/member/api/pbentity";
 
 import "google/protobuf/timestamp.proto";
 

@@ -2,7 +2,7 @@ package words
 
 import (
 	"context"
-	"proxima/app/word/internal/model/entity"
+	"micro-mall.dev/app/word/internal/model/entity"
 
 	"github.com/gogf/gf/v2/os/gtime"
 )

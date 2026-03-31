@@ -111,7 +111,7 @@ const file_health_v1_health_proto_rawDesc = "" +
 	"\tHealthRes\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status2@\n" +
 	"\x06Health\x126\n" +
-	"\x06Health\x12\x14.health.v1.HealthReq\x1a\x14.health.v1.HealthRes\"\x00B Z\x1eproxima/app/user/api/health/v1b\x06proto3"
+	"\x06Health\x12\x14.health.v1.HealthReq\x1a\x14.health.v1.HealthRes\"\x00B Z\x1emicro-mall.dev/app/user/api/health/v1b\x06proto3"
 
 var (
 	file_health_v1_health_proto_rawDescOnce sync.Once

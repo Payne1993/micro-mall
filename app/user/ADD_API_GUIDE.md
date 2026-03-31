@@ -187,7 +187,7 @@ syntax = "proto3";
 
 package health.v1;
 
-option go_package = "proxima/app/user/api/health/v1";
+option go_package = "micro-mall/app/user/api/health/v1";
 
 service Health {
   rpc Health (HealthReq) returns (HealthRes) {}
@@ -247,8 +247,8 @@ package health
 
 import (
 	"context"
-	v1 "proxima/app/user/api/health/v1"
-	logic "proxima/app/user/internal/logic/health"
+	v1 "micro-mall/app/user/api/health/v1"
+	logic "micro-mall/app/user/internal/logic/health"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 )

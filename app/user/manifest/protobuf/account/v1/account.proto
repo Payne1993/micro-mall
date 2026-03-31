@@ -3,7 +3,7 @@ syntax = "proto3";
 package account.v1;
 import "pbentity/users.proto";
 
-option go_package = "proxima/app/user/api/account/v1";
+option go_package = "micro-mall.dev/app/user/api/account/v1";
 
 service Account {
   rpc UserRegister (UserRegisterReq) returns (UserRegisterResp) {}

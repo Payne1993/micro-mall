@@ -13,9 +13,9 @@ kubectl apply -k hack/etcd/kustomize/overlays/develop
 ## Verify
 
 ```bash
-kubectl -n proxima-etcd get pods
-kubectl -n proxima-etcd get pvc
-kubectl -n proxima-etcd exec proxima-etcd-0 -- \
+kubectl -n micro-mall-etcd get pods
+kubectl -n micro-mall-etcd get pvc
+kubectl -n micro-mall-etcd exec micro-mall-etcd-0 -- \
   /usr/local/bin/etcdctl --endpoints=http://127.0.0.1:2379 endpoint status -w table
 ```
 
@@ -24,7 +24,7 @@ kubectl -n proxima-etcd exec proxima-etcd-0 -- \
 Run this on the cluster master:
 
 ```bash
-kubectl -n proxima-etcd port-forward --address 127.0.0.1 svc/proxima-etcd-client 2379:2379
+kubectl -n micro-mall-etcd port-forward --address 127.0.0.1 svc/micro-mall-etcd-client 2379:2379
 ```
 
 Then from your local machine:

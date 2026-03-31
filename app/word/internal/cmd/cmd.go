@@ -3,7 +3,7 @@ package cmd
 import (
 	"context"
 
-	"proxima/app/word/internal/controller/words"
+	"micro-mall.dev/app/word/internal/controller/words"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 	"github.com/gogf/gf/v2/os/gcmd"

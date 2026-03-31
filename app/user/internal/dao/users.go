@@ -5,7 +5,7 @@
 package dao
 
 import (
-	"proxima/app/user/internal/dao/internal"
+	"micro-mall.dev/app/user/internal/dao/internal"
 )
 
 // usersDao is the data access object for the table users.

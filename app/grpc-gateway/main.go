@@ -1,9 +1,9 @@
 package main
 
 import (
-	"proxima/app/grpc-gateway/internal/cmd"
-	_ "proxima/app/grpc-gateway/internal/packed"
-	"proxima/pkg/boot"
+	"micro-mall.dev/app/grpc-gateway/internal/cmd"
+	_ "micro-mall.dev/app/grpc-gateway/internal/packed"
+	"micro-mall.dev/pkg/boot"
 
 	"github.com/gogf/gf/v2/os/gctx"
 )

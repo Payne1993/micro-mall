@@ -20,7 +20,7 @@ func Init() {
 		grpcx.Resolver.Register(etcd.New(address))
 		g.Log().Infof(ctx, "registry initialized: etcd@%s", address)
 	default:
-		path := g.Cfg().MustGet(ctx, "registry.path", "/tmp/proxima/services").String()
+		path := g.Cfg().MustGet(ctx, "registry.path", "/tmp/micro-mall.dev/services").String()
 		grpcx.Resolver.Register(file.New(path))
 		g.Log().Infof(ctx, "registry initialized: file@%s", path)
 	}

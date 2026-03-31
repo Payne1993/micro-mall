@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	wordsv1 "proxima/app/word/api/words/v1"
+	wordsv1 "micro-mall.dev/app/word/api/words/v1"
 
-	"proxima/app/grpc-gateway/internal/registry"
+	"micro-mall.dev/app/grpc-gateway/internal/registry"
 )
 
 func init() {

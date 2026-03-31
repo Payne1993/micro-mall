@@ -122,7 +122,7 @@ const file_pbentity_users_proto_rawDesc = "" +
 	"\bPassword\x18\x03 \x01(\tR\bPassword\x12\x14\n" +
 	"\x05Email\x18\x04 \x01(\tR\x05Email\x128\n" +
 	"\tCreatedAt\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\tCreatedAt\x128\n" +
-	"\tUpdatedAt\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\tUpdatedAtB\x1fZ\x1dproxima/app/user/api/pbentityb\x06proto3"
+	"\tUpdatedAt\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\tUpdatedAtB\x1fZ\x1dmicro-mall.dev/app/user/api/pbentityb\x06proto3"
 
 var (
 	file_pbentity_users_proto_rawDescOnce sync.Once

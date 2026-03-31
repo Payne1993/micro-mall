@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: proxima-etcd
-  namespace: proxima-etcd
+  name: micro-mall-etcd
+  namespace: micro-mall-etcd
   labels:
-    app: proxima-etcd
+    app: micro-mall-etcd
 spec:
-  serviceName: proxima-etcd-headless
+  serviceName: micro-mall-etcd-headless
   replicas: 3
   podManagementPolicy: Parallel
   selector:
     matchLabels:
-      app: proxima-etcd
+      app: micro-mall-etcd
   template:
     metadata:
       labels:
-        app: proxima-etcd
+        app: micro-mall-etcd
     spec:
       terminationGracePeriodSeconds: 30
       affinity:
@@ -23,7 +23,7 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             - labelSelector:
                 matchLabels:
-                  app: proxima-etcd
+                  app: micro-mall-etcd
               topologyKey: kubernetes.io/hostname
       containers:
         - name: etcd
@@ -49,12 +49,12 @@ spec:
             - --name=$(POD_NAME)
             - --data-dir=/var/lib/etcd
             - --listen-client-urls=http://0.0.0.0:2379
-            - --advertise-client-urls=http://$(POD_NAME).proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2379
+            - --advertise-client-urls=http://$(POD_NAME).micro-mall-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2379
             - --listen-peer-urls=http://0.0.0.0:2380
-            - --initial-advertise-peer-urls=http://$(POD_NAME).proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380
-            - --initial-cluster=proxima-etcd-0=http://proxima-etcd-0.proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380,proxima-etcd-1=http://proxima-etcd-1.proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380,proxima-etcd-2=http://proxima-etcd-2.proxima-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380
+            - --initial-advertise-peer-urls=http://$(POD_NAME).micro-mall-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380
+            - --initial-cluster=micro-mall-etcd-0=http://micro-mall-etcd-0.micro-mall-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380,micro-mall-etcd-1=http://micro-mall-etcd-1.micro-mall-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380,micro-mall-etcd-2=http://micro-mall-etcd-2.micro-mall-etcd-headless.$(POD_NAMESPACE).svc.cluster.local:2380
             - --initial-cluster-state=new
-            - --initial-cluster-token=proxima-etcd-cluster
+            - --initial-cluster-token=micro-mall-etcd-cluster
             - --auto-compaction-retention=1
             - --snapshot-count=10000
           volumeMounts:

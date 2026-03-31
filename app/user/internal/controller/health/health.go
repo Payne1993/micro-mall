@@ -2,9 +2,9 @@ package health
 
 import (
 	"context"
-	v1 "proxima/app/user/api/health/v1"
-	"proxima/app/user/internal/controller/registry"
-	logic "proxima/app/user/internal/logic/health"
+	v1 "micro-mall.dev/app/user/api/health/v1"
+	"micro-mall.dev/app/user/internal/controller/registry"
+	logic "micro-mall.dev/app/user/internal/logic/health"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 )

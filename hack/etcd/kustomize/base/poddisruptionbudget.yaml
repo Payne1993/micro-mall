@@ -1,10 +1,10 @@
 apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
-  name: proxima-etcd
-  namespace: proxima-etcd
+  name: micro-mall-etcd
+  namespace: micro-mall-etcd
 spec:
   maxUnavailable: 1
   selector:
     matchLabels:
-      app: proxima-etcd
+      app: micro-mall-etcd

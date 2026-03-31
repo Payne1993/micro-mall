@@ -7,7 +7,7 @@
 package v1
 
 import (
-	pbentity "proxima/app/user/api/pbentity"
+	pbentity "micro-mall.dev/app/user/api/pbentity"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -335,7 +335,7 @@ const file_account_v1_account_proto_rawDesc = "" +
 	"\aAccount\x12K\n" +
 	"\fUserRegister\x12\x1b.account.v1.UserRegisterReq\x1a\x1c.account.v1.UserRegisterResp\"\x00\x12A\n" +
 	"\tUserLogin\x12\x18.account.v1.UserLoginReq\x1a\x18.account.v1.UserLoginRes\"\x00\x12>\n" +
-	"\bUserInfo\x12\x17.account.v1.UserInfoReq\x1a\x17.account.v1.UserInfoRes\"\x00B!Z\x1fproxima/app/user/api/account/v1b\x06proto3"
+	"\bUserInfo\x12\x17.account.v1.UserInfoReq\x1a\x17.account.v1.UserInfoRes\"\x00B!Z\x1fmicro-mall.dev/app/user/api/account/v1b\x06proto3"
 
 var (
 	file_account_v1_account_proto_rawDescOnce sync.Once

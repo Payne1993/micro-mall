@@ -7,7 +7,7 @@
 package v1
 
 import (
-	pbentity "proxima/app/word/api/pbentity"
+	pbentity "micro-mall.dev/app/word/api/pbentity"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -235,7 +235,7 @@ const file_words_v1_words_proto_rawDesc = "" +
 	"\x05words\x18\x01 \x01(\v2\x0f.pbentity.WordsR\x05words2h\n" +
 	"\x05Words\x123\n" +
 	"\x06Create\x12\x13.words.v1.CreateReq\x1a\x14.words.v1.CreateResp\x12*\n" +
-	"\x03Get\x12\x10.words.v1.GetReq\x1a\x11.words.v1.GetRespB\x1fZ\x1dproxima/app/word/api/words/v1b\x06proto3"
+	"\x03Get\x12\x10.words.v1.GetReq\x1a\x11.words.v1.GetRespB\x1fZ\x1dmicro-mall.dev/app/word/api/words/v1b\x06proto3"
 
 var (
 	file_words_v1_words_proto_rawDescOnce sync.Once

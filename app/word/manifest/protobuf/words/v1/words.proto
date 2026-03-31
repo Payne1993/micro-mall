@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package words.v1;
 
-option go_package = "proxima/app/word/api/words/v1";
+option go_package = "micro-mall.dev/app/word/api/words/v1";
 import "pbentity/words.proto";
 
 message CreateReq {

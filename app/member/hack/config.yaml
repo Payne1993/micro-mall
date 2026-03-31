@@ -4,10 +4,10 @@
 gfcli:
   gen:
     dao:
-      - link: "mysql:root:ChangeMe_Root_123!@tcp(nps.nobugs.net.cn:30306)/micro-mall-member"
+      - link: "mysql:${DB_USER}:${DB_PASS}@tcp(${DB_HOST}:${DB_PORT})/${DB_NAME}"
         descriptionTag: true
     pbentity:
-      - link: "mysql:root:ChangeMe_Root_123!@tcp(nps.nobugs.net.cn:30306)/micro-mall-member"
+      - link: "mysql:${DB_USER}:${DB_PASS}@tcp(${DB_HOST}:${DB_PORT})/${DB_NAME}"
   docker:
     build: "-a amd64 -s linux -p temp -ew"
     tagPrefixes:

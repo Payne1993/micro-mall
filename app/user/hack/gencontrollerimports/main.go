@@ -31,7 +31,7 @@ func main() {
 		if strings.HasPrefix(name, ".") || name == "registry" {
 			continue
 		}
-		imports = append(imports, fmt.Sprintf("\t_ \"proxima/app/user/internal/controller/%s\"", name))
+		imports = append(imports, fmt.Sprintf("\t_ \"micro-mall.dev/app/user/internal/controller/%s\"", name))
 	}
 	sort.Strings(imports)
 

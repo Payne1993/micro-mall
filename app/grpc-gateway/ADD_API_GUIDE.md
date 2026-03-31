@@ -61,7 +61,7 @@ grpc-gateway 模块中，新增接口时只会改动以下文件：
 ```go
 import (
     // ...已有 import
-    profilev1 "proxima/app/user/api/profile/v1"  // 新增
+    profilev1 "micro-mall/app/user/api/profile/v1"  // 新增
 )
 
 var handlerRegistry = map[string]HandlerRegisterFunc{
@@ -114,7 +114,7 @@ go build ./...
 ```go
 import (
     // ...已有 import
-    messagev1 "proxima/app/chat/api/message/v1"  // 新增
+    messagev1 "micro-mall/app/chat/api/message/v1"  // 新增
 )
 
 var handlerRegistry = map[string]HandlerRegisterFunc{

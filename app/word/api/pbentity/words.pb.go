@@ -151,7 +151,7 @@ const file_pbentity_words_proto_rawDesc = "" +
 	"\x12ChineseTranslation\x18\x06 \x01(\tR\x12ChineseTranslation\x12$\n" +
 	"\rPronunciation\x18\a \x01(\tR\rPronunciation\x128\n" +
 	"\tCreatedAt\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\tCreatedAt\x128\n" +
-	"\tUpdatedAt\x18\t \x01(\v2\x1a.google.protobuf.TimestampR\tUpdatedAtB\x1fZ\x1dproxima/app/word/api/pbentityb\x06proto3"
+	"\tUpdatedAt\x18\t \x01(\v2\x1a.google.protobuf.TimestampR\tUpdatedAtB\x1fZ\x1dmicro-mall.dev/app/word/api/pbentityb\x06proto3"
 
 var (
 	file_pbentity_words_proto_rawDescOnce sync.Once

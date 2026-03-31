@@ -3,9 +3,9 @@ package words
 import (
 	"context"
 
-	"proxima/app/word/api/pbentity"
-	v1 "proxima/app/word/api/words/v1"
-	"proxima/app/word/internal/logic/words"
+	"micro-mall.dev/app/word/api/pbentity"
+	v1 "micro-mall.dev/app/word/api/words/v1"
+	"micro-mall.dev/app/word/internal/logic/words"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 	"google.golang.org/protobuf/types/known/timestamppb"

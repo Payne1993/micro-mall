@@ -2,7 +2,7 @@ package account
 
 import (
 	"context"
-	"proxima/app/user/internal/model/entity"
+	"micro-mall.dev/app/user/internal/model/entity"
 
 	"github.com/gogf/gf/v2/os/gtime"
 )

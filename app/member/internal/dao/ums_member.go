@@ -5,7 +5,7 @@
 package dao
 
 import (
-	"member/internal/dao/internal"
+	"micro-mall.dev/app/member/internal/dao/internal"
 )
 
 // umsMemberDao is the data access object for the table ums_member.

@@ -1,0 +1,9 @@
+go 1.25.4
+
+use (
+	./pkg
+	./app/user
+	./app/word
+	./app/member
+	./app/grpc-gateway
+)

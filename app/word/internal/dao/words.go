@@ -5,7 +5,7 @@
 package dao
 
 import (
-	"proxima/app/word/internal/dao/internal"
+	"micro-mall.dev/app/word/internal/dao/internal"
 )
 
 // wordsDao is the data access object for the table words.

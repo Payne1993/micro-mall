@@ -1,13 +1,15 @@
 package main
 
 import (
-	_ "proxima/app/member/internal/packed"
+	_ "micro-mall.dev/app/member/internal/packed"
 
 	"github.com/gogf/gf/v2/os/gctx"
+	"github.com/joho/godotenv"
 
-	"proxima/app/member/internal/cmd"
+	"micro-mall.dev/app/member/internal/cmd"
 )
 
 func main() {
+	_ = godotenv.Load()
 	cmd.Main.Run(gctx.GetInitCtx())
 }
