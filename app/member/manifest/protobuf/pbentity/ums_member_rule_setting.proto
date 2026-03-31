@@ -1,0 +1,21 @@
+// ==========================================================================
+// Code generated and maintained by GoFrame CLI tool. DO NOT EDIT.
+// ==========================================================================
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "proxima/app/member/api/pbentity";
+
+
+
+message UmsMemberRuleSetting {
+    int64  Id                = 1; //
+    int32  ContinueSignDay   = 2; // 连续签到天数
+    int32  ContinueSignPoint = 3; // 连续签到赠送数量
+    string ConsumePerPoint   = 4; // 每消费多少元获取1个点
+    string LowOrderAmount    = 5; // 最低获取点数的订单金额
+    int32  MaxPointPerOrder  = 6; // 每笔订单最高获取点数
+    int32  Type              = 7; // 类型：0->积分规则；1->成长值规则
+}

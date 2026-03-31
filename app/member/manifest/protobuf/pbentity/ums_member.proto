@@ -1,0 +1,33 @@
+// ==========================================================================
+// Code generated and maintained by GoFrame CLI tool. DO NOT EDIT.
+// ==========================================================================
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "proxima/app/member/api/pbentity";
+
+import "google/protobuf/timestamp.proto";
+
+message UmsMember {
+    int64                     Id                    = 1;  //
+    int64                     MemberLevelId         = 2;  //
+    string                    Username              = 3;  // 用户名
+    string                    Password              = 4;  // 密码
+    string                    Nickname              = 5;  // 昵称
+    string                    Phone                 = 6;  // 手机号码
+    int32                     Status                = 7;  // 帐号启用状态:0->禁用；1->启用
+    google.protobuf.Timestamp CreateTime            = 8;  // 注册时间
+    string                    Icon                  = 9;  // 头像
+    int32                     Gender                = 10; // 性别：0->未知；1->男；2->女
+    google.protobuf.Timestamp Birthday              = 11; // 生日
+    string                    City                  = 12; // 所做城市
+    string                    Job                   = 13; // 职业
+    string                    PersonalizedSignature = 14; // 个性签名
+    int32                     SourceType            = 15; // 用户来源
+    int32                     Integration           = 16; // 积分
+    int32                     Growth                = 17; // 成长值
+    int32                     LuckeyCount           = 18; // 剩余抽奖次数
+    int32                     HistoryIntegration    = 19; // 历史积分数量
+}

@@ -1,0 +1,21 @@
+// ==========================================================================
+// Code generated and maintained by GoFrame CLI tool. DO NOT EDIT.
+// ==========================================================================
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "proxima/app/member/api/pbentity";
+
+import "google/protobuf/timestamp.proto";
+
+message UmsMemberLoginLog {
+    int64                     Id         = 1; //
+    int64                     MemberId   = 2; //
+    google.protobuf.Timestamp CreateTime = 3; //
+    string                    Ip         = 4; //
+    string                    City       = 5; //
+    int32                     LoginType  = 6; // 登录类型：0->PC；1->android;2->ios;3->小程序
+    string                    Province   = 7; //
+}

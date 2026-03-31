@@ -1,0 +1,19 @@
+// ==========================================================================
+// Code generated and maintained by GoFrame CLI tool. DO NOT EDIT.
+// ==========================================================================
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "proxima/app/member/api/pbentity";
+
+
+
+message UmsMemberTask {
+    int64  Id           = 1; //
+    string Name         = 2; //
+    int32  Growth       = 3; // 赠送成长值
+    int32  Intergration = 4; // 赠送积分
+    int32  Type         = 5; // 任务类型：0->新手任务；1->日常任务
+}

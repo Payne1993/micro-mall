@@ -1,0 +1,27 @@
+// ==========================================================================
+// Code generated and maintained by GoFrame CLI tool. DO NOT EDIT.
+// ==========================================================================
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "proxima/app/member/api/pbentity";
+
+
+
+message UmsMemberLevel {
+    int64  Id                    = 1;  //
+    string Name                  = 2;  //
+    int32  GrowthPoint           = 3;  //
+    int32  DefaultStatus         = 4;  // 是否为默认等级：0->不是；1->是
+    string FreeFreightPoint      = 5;  // 免运费标准
+    int32  CommentGrowthPoint    = 6;  // 每次评价获取的成长值
+    int32  PriviledgeFreeFreight = 7;  // 是否有免邮特权
+    int32  PriviledgeSignIn      = 8;  // 是否有签到特权
+    int32  PriviledgeComment     = 9;  // 是否有评论获奖励特权
+    int32  PriviledgePromotion   = 10; // 是否有专享活动特权
+    int32  PriviledgeMemberPrice = 11; // 是否有会员价格特权
+    int32  PriviledgeBirthday    = 12; // 是否有生日特权
+    string Note                  = 13; //
+}

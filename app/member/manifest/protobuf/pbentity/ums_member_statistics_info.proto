@@ -1,0 +1,30 @@
+// ==========================================================================
+// Code generated and maintained by GoFrame CLI tool. DO NOT EDIT.
+// ==========================================================================
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "proxima/app/member/api/pbentity";
+
+import "google/protobuf/timestamp.proto";
+
+message UmsMemberStatisticsInfo {
+    int64                     Id                  = 1;  //
+    int64                     MemberId            = 2;  //
+    string                    ConsumeAmount       = 3;  // 累计消费金额
+    int32                     OrderCount          = 4;  // 订单数量
+    int32                     CouponCount         = 5;  // 优惠券数量
+    int32                     CommentCount        = 6;  // 评价数
+    int32                     ReturnOrderCount    = 7;  // 退货数量
+    int32                     LoginCount          = 8;  // 登录次数
+    int32                     AttendCount         = 9;  // 关注数量
+    int32                     FansCount           = 10; // 粉丝数量
+    int32                     CollectProductCount = 11; //
+    int32                     CollectSubjectCount = 12; //
+    int32                     CollectTopicCount   = 13; //
+    int32                     CollectCommentCount = 14; //
+    int32                     InviteFriendCount   = 15; //
+    google.protobuf.Timestamp RecentOrderTime     = 16; // 最后一次下订单时间
+}

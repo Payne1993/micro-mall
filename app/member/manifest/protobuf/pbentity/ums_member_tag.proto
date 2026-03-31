@@ -1,0 +1,18 @@
+// ==========================================================================
+// Code generated and maintained by GoFrame CLI tool. DO NOT EDIT.
+// ==========================================================================
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "proxima/app/member/api/pbentity";
+
+
+
+message UmsMemberTag {
+    int64  Id                = 1; //
+    string Name              = 2; //
+    int32  FinishOrderCount  = 3; // 自动打标签完成订单数量
+    string FinishOrderAmount = 4; // 自动打标签完成订单金额
+}

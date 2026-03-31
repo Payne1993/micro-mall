@@ -1,0 +1,17 @@
+// ==========================================================================
+// Code generated and maintained by GoFrame CLI tool. DO NOT EDIT.
+// ==========================================================================
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "proxima/app/member/api/pbentity";
+
+
+
+message UmsMemberProductCategoryRelation {
+    int64 Id                = 1; //
+    int64 MemberId          = 2; //
+    int64 ProductCategoryId = 3; //
+}
