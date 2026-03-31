@@ -24,7 +24,7 @@ kubectl -n proxima-etcd exec proxima-etcd-0 -- \
 Run this on the cluster master:
 
 ```bash
-kubectl -n proxima-etcd port-forward svc/proxima-etcd-client 2379:2379
+kubectl -n proxima-etcd port-forward --address 127.0.0.1 svc/proxima-etcd-client 2379:2379
 ```
 
 Then from your local machine:
@@ -34,3 +34,5 @@ ssh -p 60011 -L 2379:127.0.0.1:2379 root@nps.nobugs.net.cn
 ```
 
 After that, local clients can connect to `127.0.0.1:2379`.
+
+If you omit `--address 127.0.0.1`, `kubectl port-forward` may bind only to IPv6 `::1`, which can cause EOF errors for SSH tunnels forwarding to `127.0.0.1`.

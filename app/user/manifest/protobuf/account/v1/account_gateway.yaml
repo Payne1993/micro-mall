@@ -1,0 +1,16 @@
+type: google.api.Service
+config_version: 3
+
+http:
+  rules:
+    - selector: account.v1.Account.UserRegister
+      post: /api/v1/user/register
+      body: "*"
+    - selector: account.v1.Account.UserLogin
+      post: /api/v1/user/login
+      body: "*"
+    - selector: account.v1.Account.UserInfo
+      get: /api/v1/user/info
+    - selector: account.v1.Account.UserInfo
+      post: /api/v1/user/info
+      body: "*"

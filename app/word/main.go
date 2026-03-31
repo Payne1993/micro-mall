@@ -2,6 +2,7 @@ package main
 
 import (
 	_ "proxima/app/word/internal/packed"
+	"proxima/pkg/boot"
 
 	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
 
@@ -11,5 +12,7 @@ import (
 )
 
 func main() {
-	cmd.Main.Run(gctx.GetInitCtx())
+	var ctx = gctx.New()
+	boot.Init()
+	cmd.Main.Run(ctx)
 }

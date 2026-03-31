@@ -1,0 +1,2 @@
+etcd:
+  address: "nps.nobugs.net.cn:30007"

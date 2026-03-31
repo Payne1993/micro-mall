@@ -2,7 +2,9 @@ package cmd
 
 import (
 	"context"
-	"proxima/app/user/internal/controller/account"
+
+	_ "proxima/app/user/internal/controller" // autoload all controllers
+	"proxima/app/user/internal/controller/registry"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 	"github.com/gogf/gf/v2/os/gcmd"
@@ -22,7 +24,7 @@ var (
 				)}...,
 			)
 			s := grpcx.Server.New(c)
-			account.Register(s)
+			registry.RegisterAll(s)
 			s.Run()
 			return nil
 		},

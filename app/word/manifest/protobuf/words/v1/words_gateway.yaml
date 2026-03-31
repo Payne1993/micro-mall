@@ -1,0 +1,10 @@
+type: google.api.Service
+config_version: 3
+
+http:
+  rules:
+    - selector: words.v1.Words.Create
+      post: /api/v1/word/create
+      body: "*"
+    - selector: words.v1.Words.Get
+      get: /api/v1/word/get/{id}

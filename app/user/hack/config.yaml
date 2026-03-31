@@ -4,8 +4,8 @@
 gfcli:
   gen:
     dao:
-      - link: "mysql:root:ZDgBVkSfLkhsYBtmOvQS@tcp(nps.nobugs.net.cn:30306)/proxima_user"
+      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/proxima_user"
         descriptionTag: true
     pbentity:
-      - link: "mysql:root:ZDgBVkSfLkhsYBtmOvQS@tcp(nps.nobugs.net.cn:30306)/proxima_user"
+      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/proxima_user"
         descriptionTag: true

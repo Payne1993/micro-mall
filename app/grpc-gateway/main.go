@@ -1,14 +1,11 @@
 package main
 
 import (
-	_ "proxima/app/user/internal/packed"
+	"proxima/app/grpc-gateway/internal/cmd"
+	_ "proxima/app/grpc-gateway/internal/packed"
 	"proxima/pkg/boot"
 
-	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
-
 	"github.com/gogf/gf/v2/os/gctx"
-
-	"proxima/app/user/internal/cmd"
 )
 
 func main() {

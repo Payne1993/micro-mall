@@ -69,6 +69,18 @@ deploy: cli.install
 pb: cli.install
 	@gf gen pb
 
+# Generate grpc-gateway reverse-proxy bindings from external HTTP mapping.
+.PHONY: gw
+gw: cli.install
+	@PATH="$$PATH:$$HOME/go/bin" protoc \
+		-I manifest/protobuf \
+		--grpc-gateway_out=paths=source_relative,grpc_api_configuration=manifest/protobuf/account/v1/account_gateway.yaml:api \
+		manifest/protobuf/account/v1/account.proto
+	@PATH="$$PATH:$$HOME/go/bin" protoc \
+		-I manifest/protobuf \
+		--grpc-gateway_out=paths=source_relative,grpc_api_configuration=manifest/protobuf/health/v1/health_gateway.yaml:api \
+		manifest/protobuf/health/v1/health.proto
+
 # Generate protobuf files for database tables.
 .PHONY: pbentity
 pbentity: cli.install
